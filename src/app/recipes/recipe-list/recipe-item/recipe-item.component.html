@@ -1,4 +1,25 @@
 <a
+  style="cursor: pointer;"
+  class="list-group-item clearfix"
+  [routerLink]="['/recipes', index]" routerLinkActive="active">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
+  </div>
+  <span class="pull-right">
+        <img
+          [src]="recipe.imagePath"
+          alt="{{ recipe.name }}"
+          class="img-responsive"
+          style="max-height: 50px;">
+      </span>
+</a>
+
+<!-- A relative route also works because we are in the recipe component
+  [routerLink]="[index]"> -->
+
+<!--
+<a
   href="#"
   class="list-group-item clearfix"
   (click)="onSelected()">
@@ -13,4 +34,5 @@
           class="img-responsive"
           style="max-height: 50px;">
       </span>
-</a>
+</a> -->
+
